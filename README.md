@@ -84,4 +84,4 @@ Haz Ctrl + Click en el vínculo para que lo ejecute en tu navegador de preferenc
 
 # Desarrollado Por ❤️
 
-**Víctor E. Mancera Gallardo**
+( ͡❛ ͜ʖ ͡❛) 👉 **Víctor E. Mancera Gallardo**

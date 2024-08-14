@@ -1,11 +1,13 @@
-import { montserrat } from "@/app/(root)/layout";
+"use client";
+import Lottie from "react-lottie";
+import { Montserrat } from "next/font/google";
+import { useState, useCallback, useMemo } from "react";
 import {
   MdOutlineArrowCircleLeft,
   MdArrowCircleRight,
   MdSpeaker,
   MdShoppingCart,
 } from "react-icons/md";
-
 import {
   FaLaptop,
   FaCamera,
@@ -15,6 +17,14 @@ import {
   FaGamepad,
   FaHeart,
 } from "react-icons/fa";
+import datosAnimacion from "../../data/confeti.json";
+import BotonMagico from "./BotonMagico";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
 
 const products = [
   {
@@ -127,6 +137,19 @@ const CategoryMenu: React.FC = () => {
 };
 
 export const Products = () => {
+  const [agregado, setAgregado] = useState(false);
+  const opcionesAnimacion = {
+    loop: agregado,
+    autoplay: agregado,
+    animationData: datosAnimacion,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const fnAlAgregar = useCallback(() => {
+    setAgregado(true);
+  }, []);
+
   return (
     <section
       id="productos"
@@ -160,6 +183,14 @@ export const Products = () => {
               </button>
               <div className="bg-[#D9D9D9] h-[267px] rounded-md mb-4"></div>
             </div>
+            <div
+              className={`absolute bottom-1 left-2 ${
+                agregado ? "block" : "block"
+              }`}
+            >
+              {/* Animación confeti */}
+              <Lottie options={opcionesAnimacion} />
+            </div>
             <h3 className="flex justify-between text-lg font-bold my-4">
               {product.name}
               <span className="text-gray-800 font-bold">
@@ -177,10 +208,13 @@ export const Products = () => {
                 ({product.reviews} reviews)
               </span>
             </div>
-            <button className="flex justify-center items-center my-4 border border-gray-300 py-2 px-4 rounded-full w-[192px] h-[53px]">
-              <MdShoppingCart className="mr-2" size={20} />
-              Add to Cart
-            </button>
+            <BotonMagico
+              titulo="Add to cart"
+              icono={<MdShoppingCart className="mr-2" size={20} />}
+              posicion="izquierda"
+              alClickear={fnAlAgregar}
+              otrasClases="!bg-white !text-black"
+            />
           </div>
         ))}
       </div>

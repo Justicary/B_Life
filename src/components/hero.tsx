@@ -1,5 +1,10 @@
 import Image from "next/image";
-import { montserrat } from "@/app/(root)/layout";
+import { Montserrat } from "next/font/google";
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
 
 export const Hero = () => {
   return (
