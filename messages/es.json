@@ -1,0 +1,37 @@
+{
+  "Header": {
+    "title0": "Mi metodología para ",
+    "title1": "nuevos proyectos",
+    "cards": {
+      "1": {
+        "title": "Planeación & Estrategía",
+        "desc": "Colaboración para trazar los objetivos del sitio web, el público objetivo y funcionalidades clave. Discutiremos cosas como la estructura del sitio, requisitos de navegación y contenido.",
+        "order": "Fase 1"
+      },
+      "2": {
+        "title": "Actualización de desarrollo & progreso",
+        "desc": "Una vez que estamos de acuerdo en el plan, le doy \"play\" a mi lista de reproducción y me sumerjo en codificación. Desde bocetos iniciales hasta código pulido y mantengo a mis clientes actualizados en cada paso del camino.",
+        "order": "Fase 2"
+      },
+      "3": {
+        "title": "Desarrollo e implementación",
+        "desc": "¡Aquí es donde ocurre la magia! Basado en el diseño aprobado, traduciré todo a código funcional y construiré tu sitio web desde el principio.",
+        "order": "Fase 3"
+      }
+    }
+  },
+  "Hero": {
+    "top": "Creando Mágia Dinámica en la Web",
+    "title": "Transformando Conceptos en Experiencias Memorables al Usuario",
+    "desc": "Hola, soy Víctor Mancera, un apasionado programador \"fullstack\" con más de 10 años de experiencia en el desarrollo de aplicaciones con inteligencia artificial para plataformas web y móviles.",
+    "button": "Mira mi perfil"
+  },
+  "Footer": {
+    "title0": "¿Estás listo para llevar ",
+    "title1": "tu",
+    "title2": "presencia digital al siguiente nivel?",
+    "desc": "Contáctame hoy mismo y platiquemos como puedo ayudarte a lograr tus objetivos ó alcanzar tus metas.",
+    "sendEmail": "Envíame un email",
+    "copyright": "Derechos Reservados ©2024 Victor Mancera."
+  }
+}
